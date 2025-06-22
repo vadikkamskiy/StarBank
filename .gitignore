@@ -42,3 +42,4 @@ gradle/
 
 
 transaction.mv.db
+transaction.trace.db

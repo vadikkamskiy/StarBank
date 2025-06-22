@@ -1,8 +1,10 @@
-package com.skypro.StarBank;
+package com.skypro.starbank;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
+@ActiveProfiles("test")
 @SpringBootTest
 class StarBankApplicationTests {
 
