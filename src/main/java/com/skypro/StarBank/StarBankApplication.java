@@ -1,4 +1,4 @@
-package com.skypro.StarBank;
+package com.skypro.starbank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
