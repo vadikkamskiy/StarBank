@@ -1,15 +1,17 @@
-package com.skypro.starbank.model;
+package com.skypro.StarBank.model;
+
+import java.util.UUID;
 
 public class Product {
-    private Long id;
+    private UUID id;
     private String name;
     private String type;
     private String description;
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

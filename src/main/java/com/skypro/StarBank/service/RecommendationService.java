@@ -1,14 +1,15 @@
-package com.skypro.starbank.service;
+package com.skypro.StarBank.service;
 
+import com.skypro.StarBank.model.Product;
+import com.skypro.StarBank.model.Transaction;
+import com.skypro.StarBank.repository.ProductRepository;
+import com.skypro.StarBank.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Collections;
+import java.util.UUID;
 import java.util.stream.Collectors;
-import com.skypro.starbank.repository.TransactionRepository;
-import com.skypro.starbank.repository.ProductRepository;
-import com.skypro.starbank.model.Transaction;
-import com.skypro.starbank.model.Product;
 
 
 @Service
@@ -20,7 +21,7 @@ public class RecommendationService {
     @Autowired
     private ProductRepository productRepo;
 
-    public List<Product> recommendForUser(Long userId) {
+    public List<Product> recommendForUser(UUID userId) {
         List<Transaction> transactions = transactionRepo.getTransactionsByUserId(userId);
         double totalAmount = transactions.stream()
                                          .mapToDouble(Transaction::getAmount)

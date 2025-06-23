@@ -1,4 +1,4 @@
-package com.skypro.starbank.config;
+package com.skypro.StarBank.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

@@ -1,6 +1,6 @@
-package com.skypro.starbank.repository;
+package com.skypro.StarBank.repository;
 
-import com.skypro.starbank.model.Product;
+import com.skypro.StarBank.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
