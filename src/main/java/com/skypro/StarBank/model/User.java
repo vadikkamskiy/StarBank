@@ -1,5 +1,7 @@
-package com.skypro.starbank.model;
+package com.skypro.StarBank.model;
 import lombok.*;
+
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -8,7 +10,7 @@ import lombok.*;
 @ToString
 
 public class User {
-    private Long id;
+    private UUID id;
     private String username;
     private String firstName;
     private String lastName;
