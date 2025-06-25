@@ -4,9 +4,9 @@
 
 plugins {
     id 'application'
-    id("org.springframework.boot") version "3.5.3"
     id 'java-library'
     id 'maven-publish'
+    id 'java'
 }
 
 repositories {
@@ -17,12 +17,11 @@ repositories {
 }
 
 dependencies {
-    implementation("com.zaxxer:HikariCP:2.3.2")
-    implementation("com.h2database:h2:2.3.232")
     api libs.org.springframework.boot.spring.boot.starter.data.jdbc
     api libs.org.springframework.boot.spring.boot.starter.jdbc
     api libs.org.springframework.boot.spring.boot.starter.web
     api libs.org.projectlombok.lombok
+    api libs.com.h2database.h2
     testImplementation libs.org.springframework.boot.spring.boot.starter.test
 }
 
@@ -48,5 +47,11 @@ tasks.withType(Javadoc) {
 }
 
 application {
-    mainClass = 'com.skypro.starbank.StarBankApplication'
+    mainClass = 'com.skypro.StarBank.StarBankApplication'
 }
+
+java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)
+        }
+    }
