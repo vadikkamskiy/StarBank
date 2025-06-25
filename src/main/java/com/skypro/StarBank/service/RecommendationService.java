@@ -1,38 +1,29 @@
 package com.skypro.StarBank.service;
 
-import com.skypro.StarBank.model.Product;
-import com.skypro.StarBank.model.Transaction;
-import com.skypro.StarBank.repository.ProductRepository;
-import com.skypro.StarBank.repository.TransactionRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.skypro.StarBank.model.RecommendationDTO;
+import com.skypro.StarBank.repository.RecommendationRepository;
+import com.skypro.StarBank.rules.RecommendationRuleSet;
 import org.springframework.stereotype.Service;
-import java.util.List;
-import java.util.Collections;
-import java.util.UUID;
-import java.util.stream.Collectors;
 
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class RecommendationService {
 
-    @Autowired
-    private TransactionRepository transactionRepo;
+    private final List<RecommendationRuleSet> rules;
+    private final RecommendationRepository repository;
 
-    @Autowired
-    private ProductRepository productRepo;
+    public RecommendationService(List<RecommendationRuleSet> rules, RecommendationRepository repository) {
+        this.rules = rules;
+        this.repository = repository;
+    }
 
-    public List<Product> recommendForUser(UUID userId) {
-        List<Transaction> transactions = transactionRepo.getTransactionsByUserId(userId);
-        double totalAmount = transactions.stream()
-                                         .mapToDouble(Transaction::getAmount)
-                                         .sum();
-
-        if (totalAmount > 10000) {
-            return productRepo.getAllProducts().stream()
-                .filter(p -> p.getType().equalsIgnoreCase("premium"))
+    public List<RecommendationDTO> getRecommendations(String userId) {
+        return rules.stream()
+                .map(rule -> rule.check(userId))
+                .filter(Optional::isPresent)
+                .map(Optional::get)
                 .collect(Collectors.toList());
-        }
-
-        return Collections.emptyList();
     }
 }
