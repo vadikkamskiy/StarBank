@@ -48,4 +48,12 @@ public class RecommendationService {
     public List<User> getAllUsers() {
         return userRepo.getAllUsers();
     }
+
+    public List<Transaction> getTransaction(UUID userId) {
+        return transactionRepo.getTransactionsByUserId(userId);
+    }
+
+    public List<Product> getRecommendations(UUID userId){
+        return productRepo.findRecommendations(userId);
+    }
 }
