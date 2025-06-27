@@ -4,6 +4,7 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 
@@ -19,5 +20,10 @@ public class DataSourceConfig {
         config.setPassword("");
         config.setReadOnly(true);
         return new HikariDataSource(config);
+    }
+
+    @Bean("recommendationsJdbcTemplate")
+    public JdbcTemplate recommendationsJdbcTemplate(DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
     }
 }
