@@ -48,5 +48,5 @@ tasks.withType(Javadoc) {
 }
 
 application {
-    mainClass = 'com.skypro.starbank.StarBankApplication'
+    mainClass = 'com.skypro.StarBank.StarBankApplication'
 }
