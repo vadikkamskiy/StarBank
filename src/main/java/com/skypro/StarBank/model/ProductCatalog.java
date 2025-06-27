@@ -2,6 +2,8 @@ package com.skypro.StarBank.model;
 
 import org.springframework.stereotype.Component;
 
+import com.skypro.StarBank.dto.response.RecommendationDTO;
+
 import java.util.List;
 
 

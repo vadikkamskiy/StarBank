@@ -1,6 +1,6 @@
 package com.skypro.StarBank.service;
 
-import com.skypro.StarBank.model.RecommendationDTO;
+import com.skypro.StarBank.dto.response.RecommendationDTO;
 import com.skypro.StarBank.repository.RecommendationRepository;
 import com.skypro.StarBank.rules.RecommendationRuleSet;
 import org.springframework.stereotype.Service;
@@ -12,11 +12,8 @@ import java.util.stream.Collectors;
 public class RecommendationService {
 
     private final List<RecommendationRuleSet> rules;
-    private final RecommendationRepository repository;
-
     public RecommendationService(List<RecommendationRuleSet> rules, RecommendationRepository repository) {
         this.rules = rules;
-        this.repository = repository;
     }
 
     public List<RecommendationDTO> getRecommendations(String userId) {

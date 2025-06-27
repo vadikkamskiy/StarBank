@@ -1,7 +1,7 @@
 package com.skypro.StarBank.rules;
 
+import com.skypro.StarBank.dto.response.RecommendationDTO;
 import com.skypro.StarBank.model.ProductCatalog;
-import com.skypro.StarBank.model.RecommendationDTO;
 import com.skypro.StarBank.repository.RecommendationRepository;
 import org.springframework.stereotype.Component;
 
