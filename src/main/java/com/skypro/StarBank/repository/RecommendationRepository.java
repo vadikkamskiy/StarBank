@@ -1,7 +1,8 @@
 package com.skypro.StarBank.repository;
 
+import com.skypro.StarBank.dto.response.RecommendationDTO;
 import com.skypro.StarBank.model.ProductCatalog;
-import com.skypro.StarBank.model.RecommendationDTO;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
