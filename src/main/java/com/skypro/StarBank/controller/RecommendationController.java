@@ -24,3 +24,4 @@ public class RecommendationController {
         return new Response(userId, recommendations);
     }
 }
+    
