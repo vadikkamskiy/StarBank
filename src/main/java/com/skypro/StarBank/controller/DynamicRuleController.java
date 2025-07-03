@@ -25,7 +25,6 @@ public class DynamicRuleController {
     @PostMapping
     public ResponseEntity<DynamicRuleResponse> createRule(@RequestBody DynamicRuleRequest request) {
         DynamicRule rule = new DynamicRule();
-//        rule.setId(request.getId());
         rule.setName(request.getName());
         rule.setText(request.getText());
         rule.setRule(request.getRule().stream()

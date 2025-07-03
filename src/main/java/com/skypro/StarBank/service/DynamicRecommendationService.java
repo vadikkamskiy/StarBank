@@ -43,4 +43,5 @@ public class DynamicRecommendationService {
         recommendations.addAll(dynamicRecs);
         return recommendations;
     }
+
 }

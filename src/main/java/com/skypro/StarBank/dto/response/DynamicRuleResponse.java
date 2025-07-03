@@ -53,4 +53,5 @@ public class DynamicRuleResponse {
     public void setRule(List<QueryRequest> rule) {
         this.rule = rule;
     }
+
 }

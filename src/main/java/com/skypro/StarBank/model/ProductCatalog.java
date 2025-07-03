@@ -6,7 +6,6 @@ import com.skypro.StarBank.dto.response.RecommendationDTO;
 
 import java.util.List;
 
-
 @Component
 public class ProductCatalog {
     public static final List<RecommendationDTO> RECOMMENDATIONS = List.of(

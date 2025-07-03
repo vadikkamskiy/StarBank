@@ -3,7 +3,6 @@ package com.skypro.StarBank.dto.response;
 import java.util.List;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
 @Getter
 @NoArgsConstructor

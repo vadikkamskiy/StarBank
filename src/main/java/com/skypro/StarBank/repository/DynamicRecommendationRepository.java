@@ -74,4 +74,5 @@ public class DynamicRecommendationRepository {
         Double sum = jdbcTemplate.queryForObject(sql, Double.class, userId, productType, transactionType);
         return sum == null ? 0 : sum;
     }
+
 }

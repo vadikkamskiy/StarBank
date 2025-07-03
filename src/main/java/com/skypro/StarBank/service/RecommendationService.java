@@ -23,4 +23,5 @@ public class RecommendationService {
                 .map(Optional::get)
                 .collect(Collectors.toList());
     }
+
 }

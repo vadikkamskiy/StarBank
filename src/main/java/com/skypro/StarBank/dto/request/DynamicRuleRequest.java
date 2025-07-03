@@ -46,5 +46,6 @@ public class DynamicRuleRequest {
     public void setRule(List<QueryRequest> rule) {
         this.rule = rule;
     }
+
 }
 

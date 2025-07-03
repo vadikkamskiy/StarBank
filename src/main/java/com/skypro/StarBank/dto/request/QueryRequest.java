@@ -25,4 +25,5 @@ public class QueryRequest {
     public boolean isNegate() {
         return negate;
     }
+
 }

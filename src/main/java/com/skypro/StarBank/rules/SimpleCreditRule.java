@@ -11,11 +11,9 @@ import java.util.Optional;
 public class SimpleCreditRule implements RecommendationRuleSet {
 
     private final RecommendationRepository repo;
-    private final ProductCatalog productCatalog;
 
-    public SimpleCreditRule(RecommendationRepository repo, ProductCatalog productCatalog) {
+    public SimpleCreditRule(RecommendationRepository repo) {
         this.repo = repo;
-        this.productCatalog = productCatalog;
     }
 
     @Override
