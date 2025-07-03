@@ -42,4 +42,5 @@ public class DataSourceConfig {
     public DataSource rulesDataSource() {
         return DataSourceBuilder.create().build();
     }
+
 }

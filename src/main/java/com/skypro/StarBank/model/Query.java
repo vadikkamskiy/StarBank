@@ -41,4 +41,5 @@ public class Query {
         this.negate = negate;
     }
 
+
 }

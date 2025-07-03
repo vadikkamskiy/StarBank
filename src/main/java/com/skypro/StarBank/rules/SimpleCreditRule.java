@@ -26,6 +26,7 @@ public class SimpleCreditRule implements RecommendationRuleSet {
         if (totalDeposits <= totalSpent) return Optional.empty();
         if (totalSpent <= 100000) return Optional.empty();
 
+
         return Optional.of(repo.getById("ab138afb-f3ba-4a93-b74f-0fcee86d447f"));
     }
 }

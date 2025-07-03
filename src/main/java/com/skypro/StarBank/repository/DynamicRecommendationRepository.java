@@ -75,4 +75,5 @@ public class DynamicRecommendationRepository {
         return sum == null ? 0 : sum;
     }
 
+
 }

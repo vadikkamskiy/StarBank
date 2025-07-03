@@ -20,3 +20,4 @@ CREATE TABLE IF NOT EXISTS dynamic_rule_query_arguments (
                                                             argument_value VARCHAR(255)
 );
 
+

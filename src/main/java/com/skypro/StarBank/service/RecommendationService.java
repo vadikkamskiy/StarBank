@@ -24,4 +24,5 @@ public class RecommendationService {
                 .collect(Collectors.toList());
     }
 
+
 }

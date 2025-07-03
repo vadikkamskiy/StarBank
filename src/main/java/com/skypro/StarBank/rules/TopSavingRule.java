@@ -15,6 +15,7 @@ public class TopSavingRule implements RecommendationRuleSet {
 
     Logger logger = LoggerFactory.getLogger(TopSavingRule.class);
 
+
     public TopSavingRule(RecommendationRepository repo) {
         this.repo = repo;
     }

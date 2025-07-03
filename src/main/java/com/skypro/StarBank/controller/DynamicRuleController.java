@@ -44,6 +44,7 @@ public class DynamicRuleController {
         ));
     }
 
+
     @GetMapping
     public ResponseEntity<Map<String, List<DynamicRule>>> getAllRules() {
         Map<String, List<DynamicRule>> response = new HashMap<>();

@@ -43,6 +43,7 @@ public class DynamicRule {
         return name;
     }
 
+
     public String getText() {
         return text;
     }

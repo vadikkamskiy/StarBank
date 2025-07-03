@@ -8,6 +8,7 @@ public class RecommendationDTO {
     private String name;
     private String text;
 
+
     public RecommendationDTO(String id, String name, String text) {
         this.id = id;
         this.name = name;
