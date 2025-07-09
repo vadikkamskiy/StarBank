@@ -45,3 +45,4 @@ transaction.mv.db
 transaction.trace.db
 
 bin/
+.env

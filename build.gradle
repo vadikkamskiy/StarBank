@@ -3,10 +3,12 @@
  */
 
 plugins {
-    id 'java'
-    id 'application'
     id 'java-library'
     id 'maven-publish'
+    id 'application'
+    id 'java'
+    id 'org.springframework.boot' version '3.5.3'
+    id 'io.spring.dependency-management' version '1.1.4'
 }
 
 repositories {
@@ -27,6 +29,8 @@ dependencies {
     api libs.com.github.ben.manes.caffeine.caffeine
     api libs.org.springframework.boot.spring.boot.starter.cache
     api libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
+    api libs.me.paulschwarz.spring.dotenv
+    implementation 'com.github.pengrad:java-telegram-bot-api:6.9.1'
     testImplementation libs.org.springframework.boot.spring.boot.starter.test
 }
 
@@ -50,11 +54,12 @@ tasks.withType(Javadoc) {
     options.encoding = 'UTF-8'
 }
 
-java{
+application {
+    mainClass = 'com.skypro.StarBank.StarBankApplication'
+}
+
+java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
 }
 
-application {
-    mainClass = 'com.skypro.StarBank.StarBankApplication'
-}
