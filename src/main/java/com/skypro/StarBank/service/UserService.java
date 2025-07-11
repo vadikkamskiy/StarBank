@@ -6,8 +6,6 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 import com.skypro.StarBank.repository.UserDAO;
 
-import jakarta.persistence.EntityNotFoundException;
-
 @Service
 public class UserService {
     private final UserDAO userDAO;
@@ -21,6 +19,6 @@ public class UserService {
     }
 
     public Optional<String> getFullName(String username) {
-        return userDAO.fullName(username);
+        return userDAO.getFullName(username);
     }
 }

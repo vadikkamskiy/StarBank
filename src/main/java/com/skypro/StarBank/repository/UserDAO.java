@@ -26,7 +26,7 @@ public class UserDAO {
         }
     }
 
-    public Optional<String> fullName(String username){
+    public Optional<String> getFullName(String username){
         String firstName = "SELECT first_name FROM users WHERE username = ?";
         String lastName = "SELECT last_name FROM users WHERE username = ?";
         try {

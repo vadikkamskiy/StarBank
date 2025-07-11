@@ -39,6 +39,7 @@ public class TGListener {
                 if (update.message() != null && update.message().text() != null) {
                     String chatId = update.message().chat().id().toString();
                     String text = update.message().text();
+                    String output;
                     if (text.startsWith("/recommendations")) {
                         String[] parts = text.split(" ", 2);
                         if (parts.length == 2) {
@@ -60,7 +61,7 @@ public class TGListener {
                                         .reduce("", (a, b) -> a + "\n" + b);
                                 telegramBot.execute(new SendMessage(chatId, response));
                             } else {
-                                response += "Пользователь ником " + userName + " не найден.";
+                                response = "Пользователь ником " + userName + " не найден.";
                                 telegramBot.execute(new SendMessage(chatId, response));
                             }
                         } else {
