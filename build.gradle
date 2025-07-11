@@ -30,6 +30,7 @@ dependencies {
     api libs.org.springframework.boot.spring.boot.starter.cache
     api libs.org.springdoc.springdoc.openapi.starter.webmvc.ui
     api libs.me.paulschwarz.spring.dotenv
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'com.github.pengrad:java-telegram-bot-api:6.9.1'
     testImplementation libs.org.springframework.boot.spring.boot.starter.test
 }
