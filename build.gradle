@@ -3,6 +3,7 @@
  */
 
 plugins {
+	id "com.gorylenko.gradle-git-properties" version "2.4.1"
     id 'java-library'
     id 'maven-publish'
     id 'application'
@@ -62,5 +63,9 @@ application {
 java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
+}
+
+springBoot {
+	buildInfo()
 }
 
